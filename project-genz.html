@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAFAFA">
+<title>Z世代女性 育成プロジェクト｜REYZ GROUP</title>
+<meta name="description" content="好き・発信・スキルを、未来のキャリアに。Z世代女性のためのクリエイター育成プロジェクト。10のキャリアパスと50以上の収益化フィールドを紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,600;1,700&family=Montserrat:wght@600;700;800;900&display=swap');
+:root{--ink:#0A0A0A;--paper:#FAFAFA;--pink:#F9C6D9;--tint:#FDEAF3;--tint2:#FBE3EF;--rose:#F715AC;--rose-deep:#C8108A;--rose-ink:#C10E89;--white:#FFFFFF;--muted:#5E5E63;--muted2:#6E6E73;--line:#ECECEE;--line-pink:#F6D3E2;--maxw:440px;--jp:"Zen Kaku Gothic New",system-ui,sans-serif;--serif:"Playfair Display",serif;--util:"Montserrat",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--jp);color:var(--ink);background:#E9E9EC;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.app{max-width:var(--maxw);margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 60px rgba(0,0,0,.10);padding-bottom:90px;overflow:hidden;position:relative}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 6px}
+.brand{font-family:var(--serif);font-weight:900;font-size:21px;letter-spacing:.06em}
+.brand b{color:var(--rose)}
+.sec{padding:50px 24px}
+.eyebrow{font-family:var(--util);font-weight:800;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose-ink);display:block;text-align:center}
+.h2{font-weight:900;font-size:26px;line-height:1.36;margin-top:10px;text-align:center}
+.h2 .pk{color:var(--rose)}
+.lead{color:var(--muted);font-size:14px;margin-top:14px;line-height:1.9;text-align:center}
+
+/* Hero */
+.hero{position:relative;padding:34px 24px 30px;text-align:center;background:linear-gradient(170deg,#fff 0%,#FFE9F4 52%,var(--paper) 100%);overflow:hidden}
+.hero .script{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--rose);position:relative;display:inline-block}
+.hero .script::after{content:"";position:absolute;left:8%;right:8%;bottom:-4px;height:2px;background:var(--rose);border-radius:2px}
+.hero h1{font-size:33px;font-weight:900;line-height:1.22;margin-top:16px;letter-spacing:-.01em}
+.hero h1 .big{color:var(--rose);font-size:40px;display:inline}
+.hero h1 .ko{display:inline-block;background:var(--rose);color:#fff;padding:0 8px;border-radius:8px;transform:rotate(-2deg);margin:4px 0}
+.hero .tag{margin-top:18px;display:inline-block;font-size:14px;font-weight:700;background:rgba(247,21,171,.10);color:var(--rose-deep);padding:9px 18px;border-radius:999px}
+.hero .crown{position:absolute;top:26px;right:30px;width:30px;height:30px;color:var(--rose);opacity:.85}
+
+/* number ribbon */
+.ribbon{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.ribbon .stat{background:var(--white);border:1px solid var(--line-pink);border-radius:16px;padding:14px 18px;text-align:center;box-shadow:0 8px 18px rgba(230,138,174,.10);min-width:96px}
+.ribbon .stat .n{font-family:var(--util);font-weight:900;font-size:24px;color:var(--rose);line-height:1}
+.ribbon .stat .l{font-size:10.5px;color:var(--muted);margin-top:5px;font-weight:600}
+
+/* poster */
+.poster-wrap{padding:0 20px}
+.poster-wrap img{width:100%;border-radius:22px;box-shadow:0 18px 44px rgba(247,21,171,.20)}
+.poster-cap{text-align:center;font-size:12px;color:var(--muted2);margin-top:12px;font-weight:600}
+
+/* career list with custom SVG icons */
+.career{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.crow{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--line-pink);border-radius:16px;padding:15px 16px;box-shadow:0 6px 16px rgba(230,138,174,.08);position:relative;overflow:hidden}
+.crow::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--rose),var(--rose-deep))}
+.crow .cic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--tint),var(--tint2));display:flex;align-items:center;justify-content:center;flex:none}
+.crow .cic svg{width:22px;height:22px;stroke:var(--rose-deep);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.crow .ctxt{flex:1}
+.crow .ctxt .cn{font-size:15px;font-weight:800;letter-spacing:.01em}
+.crow .ctxt .cd{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.5}
+.crow .cnum{font-family:var(--util);font-weight:800;font-size:12px;color:var(--pink)}
+
+/* field grid (platforms) - custom monogram tiles */
+.field-sec{background:linear-gradient(180deg,var(--tint),var(--paper))}
+
+/* support pillars */
+.pillars{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.pillar{background:var(--white);border:1px solid var(--line-pink);border-radius:18px;padding:20px;box-shadow:0 8px 20px rgba(230,138,174,.08)}
+.pillar .ph{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.pillar .ph .pi{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--rose),#FF5CC0);display:flex;align-items:center;justify-content:center;flex:none}
+.pillar .ph .pi svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pillar .ph h4{font-size:16px;font-weight:900}
+.pillar p{font-size:13px;color:var(--muted);line-height:1.8}
+
+/* brands */
+.brands{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;margin-top:22px}
+.brands span{font-family:var(--serif);font-weight:900;font-size:15px;letter-spacing:.03em;color:var(--ink)}
+.brands .sep{color:var(--pink);font-weight:400}
+.brands .zr{color:var(--rose)}
+
+/* CTA */
+.cta-sec{text-align:center;background:linear-gradient(180deg,var(--tint),#fff)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--ink);color:#fff;font-weight:700;font-size:16px;padding:18px 20px;border-radius:999px;box-shadow:0 10px 24px rgba(10,10,10,.22)}
+.btn .hi{width:20px;height:20px;flex:none}
+.btn--back{background:none;color:var(--muted);font-size:14px;font-weight:600;box-shadow:none;padding:12px;gap:6px}
+
+.reveal{opacity:1}
+.js-anim .reveal{opacity:0;transform:translateY(18px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* field categories (replaces run-on text) */
+
+.fcat-h::before{content:"";position:absolute;left:0;top:1px;bottom:1px;width:4px;border-radius:2px;background:linear-gradient(var(--rose),var(--rose-deep))}
+
+.fcat-sum{text-align:center;font-size:13.5px;color:var(--muted);margin-top:22px;line-height:1.9;max-width:300px;margin-left:auto;margin-right:auto;text-wrap:balance;word-break:auto-phrase}
+.fcat-sum b{color:var(--rose-deep);font-weight:800;font-size:16px}
+.fcat-sum b{color:var(--rose);font-weight:900;font-size:17px}
+
+/* Platform brand chips (recreates the colorful logo grid) */
+.pgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;justify-content:center}
+.pchip{display:flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--line-pink);border-radius:999px;padding:6px 13px 6px 6px;box-shadow:0 3px 10px rgba(230,138,174,.10)}
+.pchip-ic{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--util);font-weight:800;font-size:10px;flex:none;letter-spacing:-.02em}
+.pchip-nm{font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap}
+.pchip-ic svg{width:16px;height:16px;display:block}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="hg" x1="20%" y1="6%" x2="82%" y2="96%"><stop offset="0%" stop-color="#FFDCEE"/><stop offset="34%" stop-color="#F94CB6"/><stop offset="100%" stop-color="#C8108A"/></linearGradient>
+  <symbol id="heart" viewBox="0 0 32 32"><path d="M16 28.2C16 28.2 2.8 20.2 2.8 11.2 2.8 6.6 6.4 3.4 10.3 3.4 12.9 3.4 15 4.9 16 6.9 17 4.9 19.1 3.4 21.7 3.4 25.6 3.4 29.2 6.6 29.2 11.2 29.2 20.2 16 28.2 16 28.2Z" fill="url(#hg)"/></symbol>
+
+  <!-- Platform brand-style icons -->
+  <symbol id="p-tiktok" viewBox="0 0 24 24"><path d="M16.5 5.5c-.9-.6-1.5-1.6-1.7-2.8h-2.6v11.2c0 1.3-1.1 2.4-2.4 2.4s-2.4-1.1-2.4-2.4 1.1-2.4 2.4-2.4c.3 0 .5 0 .7.1V8.9c-.2 0-.5-.1-.7-.1C7 8.8 4.6 11.2 4.6 14s2.4 5.2 5.2 5.2 5.2-2.4 5.2-5.2V8.3c1 .7 2.3 1.1 3.6 1.1V6.8c-.7 0-1.4-.2-1.9-.5z" fill="#fff"/></symbol>
+  <symbol id="p-instagram" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="16.5" cy="7.5" r="1.1" fill="#fff"/></symbol>
+  <symbol id="p-youtube" viewBox="0 0 24 24"><path d="M10 9l5 3-5 3V9z" fill="#fff"/></symbol>
+  <symbol id="p-x" viewBox="0 0 24 24"><path d="M17 4h2.5l-5.5 6.3L20.5 20H15l-4-5.3L6.3 20H3.8l5.9-6.7L3.5 4H9l3.6 4.8L17 4zm-1 14h1.4L8 5.5H6.5L16 18z" fill="#fff"/></symbol>
+  <symbol id="p-line" viewBox="0 0 24 24"><path d="M12 4C7 4 3 7.3 3 11.3c0 3.6 3.2 6.6 7.5 7.2.3.1.7.2.8.5.1.3 0 .7 0 .9l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.4-5.5c1.3-1.5 2-3 2-4.4C21.5 7.3 17.5 4 12 4z" fill="#fff"/><path d="M9 10v3M9 10h-.8M14.5 10v3M16.5 10v3l-1.5-2M11 10v3" stroke="#06C755" stroke-width="1"/></symbol>
+  <symbol id="p-pinterest" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-3 15.4c-.1-.7-.1-1.7 0-2.4l1-4.3s-.3-.5-.3-1.3c0-1.2.7-2.1 1.6-2.1.7 0 1.1.6 1.1 1.2 0 .7-.5 1.8-.7 2.8-.2.8.4 1.5 1.2 1.5 1.5 0 2.5-1.9 2.5-4.1 0-1.7-1.1-3-3.2-3-2.3 0-3.8 1.7-3.8 3.7 0 .7.2 1.2.5 1.6.1.2.2.2.1.4l-.2.7c0 .2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.8-5 3.1 0 5.1 2.2 5.1 4.6 0 3.2-1.8 5.6-4.4 5.6-.9 0-1.7-.5-2-1l-.5 2c-.2.7-.6 1.4-.9 1.9A8 8 0 1 0 12 4z" fill="#fff"/></symbol>
+  <symbol id="p-threads" viewBox="0 0 24 24"><path d="M16 11.5c-.1 0-.2-.1-.3-.1-.2-3-1.8-4.7-4.5-4.7-1.6 0-3 .7-3.8 1.9l1.3.9c.6-.9 1.5-1.1 2.5-1.1 1.6 0 2.4 1 2.6 2.5-.6-.1-1.2-.2-1.9-.2-2.4 0-4 1.3-3.9 3.2.1 1.6 1.5 2.6 3.2 2.5 1.4-.1 3.2-.8 3.6-3.5.6.4 1 .9 1.2 1.6.3 1.1-.5 3.4-3.8 3.4-2.7 0-4.6-1.9-4.6-5.4S9.3 6.8 12 6.8c2 0 3.5.8 4.3 2.4l1.4-.6C16.6 6.4 14.6 5.2 12 5.2c-3.6 0-6.2 2.6-6.2 6.8S8.4 18.8 12 18.8c4.3 0 5.7-3 5.4-4.9-.2-1.1-.9-2-2-2.6.3.1.5.2.6.2z" fill="#fff"/></symbol>
+  <symbol id="p-note" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/><path d="M9 9v6M9 9l6 6M15 9v6" stroke="#fff" stroke-width="1.6" fill="none"/></symbol>
+  <symbol id="p-amazon" viewBox="0 0 24 24"><path d="M6 9c1-1 2.5-1.5 4-1.5s3 .4 3 2.5v4c0 .5.2.8.4 1M6 9c0-1.5 1.5-2 3-2M5 16c2 1.5 5 2 8 1.5 2-.3 3.5-1 4.5-1.8M17 17c.3.3.5.6.3 1" stroke="#222" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M11 10v3.5" stroke="#222" stroke-width="1.4"/></symbol>
+  <symbol id="p-mercari" viewBox="0 0 24 24"><path d="M7 16V9l3 4 3-4v7M16 9v7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<main class="app">
+  <div class="topbar"><a href="index.html" class="brand">REY<b>Z</b> GROUP</a></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="crown" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7l4 4 5-7 5 7 4-4-2 12H5L3 7z"/></svg>
+    <span class="script">Be the next you.</span>
+    <h1><span class="big">Z</span>世代女性<br><span class="ko">育成</span>プロジェクト</h1>
+    <div class="tag">好き・発信・スキルを、未来のキャリアに。</div>
+
+    <div class="ribbon">
+      <div class="stat reveal"><div class="n">10</div><div class="l">目指せる<br>キャリア</div></div>
+      <div class="stat reveal"><div class="n">50+</div><div class="l">収益化<br>フィールド</div></div>
+      <div class="stat reveal"><div class="n">¥0</div><div class="l">初期費用</div></div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section class="sec">
+    <span class="eyebrow reveal">Career Path</span>
+    <h2 class="h2 reveal">目指せる<span class="pk">10</span>のキャリア。</h2>
+    <p class="lead reveal">配信やSNSの"好き"は、ひとつの入り口。<br>そこから広がる未来は、こんなにある。</p>
+
+    <div class="career">
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><div class="ctxt"><div class="cn">クリエイター</div><div class="cd">動画・画像・音楽など、作品で世界を動かす</div></div><div class="cnum">01</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="ctxt"><div class="cn">インフルエンサー</div><div class="cd">発信力で、ファンと社会に影響を届ける</div></div><div class="cnum">02</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div><div class="ctxt"><div class="cn">動画配信者</div><div class="cd">ライバー・Vライバーとして、生放送で魅せる</div></div><div class="cnum">03</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg></div><div class="ctxt"><div class="cn">ストリーマー</div><div class="cd">ゲーム実況・配信で、熱量あるコミュニティを築く</div></div><div class="cnum">04</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="7"/><path d="M9 9h.01M15 9h.01"/><path d="M8 21l1.5-4M16 21l-1.5-4"/><path d="M12 17v4"/></svg></div><div class="ctxt"><div class="cn">VTuber</div><div class="cd">アバターで、なりたい自分のまま活躍する</div></div><div class="cnum">05</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><div class="ctxt"><div class="cn">モデル・タレント</div><div class="cd">表現とビジュアルで、ステージの主役になる</div></div><div class="cnum">06</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="ctxt"><div class="cn">ブロガー・ライター</div><div class="cd">言葉で価値を生み、読者の心を動かす</div></div><div class="cnum">07</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 9h.01M9 15h6"/><path d="M4 10h2M18 10h2M10 4v2M10 18v2"/></svg></div><div class="ctxt"><div class="cn">AI・デジタルクリエイター</div><div class="cd">最新ツールを武器に、次世代の表現を切り拓く</div></div><div class="cnum">08</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><div class="ctxt"><div class="cn">アフィリエイター</div><div class="cd">紹介の力で、仕組みから収益をつくる</div></div><div class="cnum">09</div></div>
+
+      <div class="crow reveal"><div class="cic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87"/></svg></div><div class="ctxt"><div class="cn">プロデューサー・マネージャー</div><div class="cd">才能を支え、チームで大きな価値を生む</div></div><div class="cnum">10</div></div>
+    </div>
+  </section>
+
+  <!-- FIELDS -->
+  <section class="sec field-sec">
+    <span class="eyebrow reveal">Field</span>
+    <h2 class="h2 reveal">収益化できる<br><span class="pk">フィールド</span>は、無限大。</h2>
+    <p class="lead reveal">配信・SNS・EC・ファンサービス・広告収益——<br>あなたに合った稼ぎ方が、必ず見つかる。</p>
+
+    <div class="pgrid reveal">
+      <div class="pchip"><span class="pchip-ic" style="background:#000000"><svg viewBox="0 0 24 24"><use href="#p-tiktok"/></svg></span><span class="pchip-nm">TikTok</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#E1306C"><svg viewBox="0 0 24 24"><use href="#p-instagram"/></svg></span><span class="pchip-nm">Instagram</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF0000"><svg viewBox="0 0 24 24"><use href="#p-youtube"/></svg></span><span class="pchip-nm">YouTube</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#000000"><svg viewBox="0 0 24 24"><use href="#p-x"/></svg></span><span class="pchip-nm">X</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#06C755"><svg viewBox="0 0 24 24"><use href="#p-line"/></svg></span><span class="pchip-nm">LINE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#000000;color:#fff">Be</span><span class="pchip-nm">BeReal</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FFE600;color:#222">L8</span><span class="pchip-nm">Lemon8</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#E60023"><svg viewBox="0 0 24 24"><use href="#p-pinterest"/></svg></span><span class="pchip-nm">Pinterest</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#000000"><svg viewBox="0 0 24 24"><use href="#p-threads"/></svg></span><span class="pchip-nm">Threads</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FFFC00;color:#222">S</span><span class="pchip-nm">Snapchat</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#9CCC65;color:#fff">m2</span><span class="pchip-nm">mixi2</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF4081;color:#fff">Po</span><span class="pchip-nm">Pococha</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF5A5F;color:#fff">17</span><span class="pchip-nm">17LIVE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00C300;color:#fff">LL</span><span class="pchip-nm">LINE LIVE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF6699;color:#fff">ミ</span><span class="pchip-nm">ミクチャ</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#7C4DFF;color:#fff">RE</span><span class="pchip-nm">REALITY</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00B4D8;color:#fff">BG</span><span class="pchip-nm">BIGO LIVE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF8A00;color:#fff">ふ</span><span class="pchip-nm">ふわっち</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00C2A8;color:#fff">IR</span><span class="pchip-nm">IRIAM</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF7A00;color:#fff">Sp</span><span class="pchip-nm">Spoon</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#1A1A2E;color:#fff">812</span><span class="pchip-nm">LIVE812</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#E4007F;color:#fff">Fa</span><span class="pchip-nm">Fantia</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#2E3191;color:#fff">fb</span><span class="pchip-nm">fanbox</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00A0E9;color:#fff">Ci</span><span class="pchip-nm">Ci-en</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#0096FA;color:#fff">px</span><span class="pchip-nm">pixivFANBOX</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF424D;color:#fff">Pt</span><span class="pchip-nm">PATREON</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00ACEE;color:#fff">Sk</span><span class="pchip-nm">Skeb</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#EF454A;color:#fff">CF</span><span class="pchip-nm">CAMPFIRE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#3B7CFF;color:#fff">mb</span><span class="pchip-nm">membership</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF6B35;color:#fff">Dn</span><span class="pchip-nm">Doneru</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#1A1A2E;color:#fff">Fu</span><span class="pchip-nm">FUSE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#41C9B4"><svg viewBox="0 0 24 24"><use href="#p-note"/></svg></span><span class="pchip-nm">note</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF5252;color:#fff">Br</span><span class="pchip-nm">Brain</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#2962FF;color:#fff">Ti</span><span class="pchip-nm">Tips</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF6F00;color:#fff">コ</span><span class="pchip-nm">ココナラ</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FC4D50;color:#fff">BO</span><span class="pchip-nm">BOOTH</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00B900;color:#fff">BA</span><span class="pchip-nm">BASE</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#3A3A3A;color:#fff">ST</span><span class="pchip-nm">STORES</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#EA5532;color:#fff">mi</span><span class="pchip-nm">minne</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#E60044;color:#fff">Cr</span><span class="pchip-nm">Creema</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF0211"><svg viewBox="0 0 24 24"><use href="#p-mercari"/></svg></span><span class="pchip-nm">mercari</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#BF0000;color:#fff">楽</span><span class="pchip-nm">ラクマ</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF0033;color:#fff">Y!</span><span class="pchip-nm">Yahoo!フリマ</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF9900"><svg viewBox="0 0 24 24"><use href="#p-amazon"/></svg></span><span class="pchip-nm">amazon</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF424D;color:#fff">Q</span><span class="pchip-nm">Qoo10</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#4285F4;color:#fff">Ad</span><span class="pchip-nm">Google AdSense</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#E60012;color:#fff">A8</span><span class="pchip-nm">A8.net</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#0089D2;color:#fff">afb</span><span class="pchip-nm">afb</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#FF69A5;color:#fff">も</span><span class="pchip-nm">もしも</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#00BCD4;color:#fff">LA</span><span class="pchip-nm">Link-A</span></div>
+      <div class="pchip"><span class="pchip-ic" style="background:#1A1A2E;color:#fff">TP</span><span class="pchip-nm">TWIN PLANET</span></div>
+    </div>
+    <div class="fcat-sum reveal">配信・EC・広告収益まで、<br><b>50以上</b>のフィールドで活躍できる。</div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="sec">
+    <span class="eyebrow reveal">Support</span>
+    <h2 class="h2 reveal">未経験から、<br>本気で<span class="pk">育てる</span>。</h2>
+    <p class="lead reveal">「好き」だけを持って来てくれれば、<br>あとはREYZが全力で伴走する。</p>
+
+    <div class="pillars">
+      <div class="pillar reveal"><div class="ph"><div class="pi"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h4>初心者歓迎</h4></div><p>知識ゼロ・フォロワーゼロでも大丈夫。シーンに合わせて、一から丁寧にサポートします。</p></div>
+
+      <div class="pillar reveal"><div class="ph"><div class="pi"><svg viewBox="0 0 24 24"><path d="M3 7l4 4 5-7 5 7 4-4-2 12H5L3 7z"/></svg></div><h4>成長を全力支援</h4></div><p>スキルアップ研修やチャンスが豊富。あなたの伸びしろを、最大限に引き出します。</p></div>
+
+      <div class="pillar reveal"><div class="ph"><div class="pi"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 8l9-5 9 5"/><path d="M8 21v-5a4 4 0 0 1 8 0v5"/></svg></div><h4>豪華特典</h4></div><p>限定イベントへの参加や、特別な特典が充実。頑張る人が、ちゃんと報われる環境です。</p></div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="sec field-sec">
+    <span class="eyebrow reveal">Group</span>
+    <h2 class="h2 reveal">REYZ GROUPの<br>サービス。</h2>
+    <p class="lead reveal">ひとつのグループで、あなたの可能性を多角的に広げる。</p>
+    <div class="brands reveal">
+      <span>REY<span class="zr">Z</span> STUDIO</span><span class="sep">／</span>
+      <span>REY<span class="zr">Z</span>IA</span><span class="sep">／</span>
+      <span>/slash</span><span class="sep">／</span>
+      <span>REY<span class="zr">Z</span> Inc.</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec cta-sec">
+    <h2 class="h2 reveal" style="margin-top:0">未来のキャリアは、<br>もう始まっている。</h2>
+    <p class="lead reveal">まずは気軽に、LINEで話そう。</p>
+    <div style="margin-top:20px" class="reveal">
+      <a href="#" data-line-cta onclick="return false" class="btn"><svg class="hi"><use href="#heart"/></svg>まずはLINEで無料相談</a>
+    </div>
+    <div style="margin-top:12px" class="reveal">
+      <a href="index.html" class="btn btn--back">← トップページに戻る</a>
+    </div>
+  </section>
+</main>
+
+<script>
+var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!r&&'IntersectionObserver' in window){document.documentElement.classList.add('js-anim');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}
+else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+
+// Safety net: reveal any still-hidden elements after timeout (prevents permanently invisible content)
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      // ビューポート内or上方にある要素を表示
+      if(r.top < window.innerHeight*1.2){ el.classList.add('in'); }
+    });
+  },1200);
+});
+// Also reveal on first scroll immediately for elements near viewport
+var _revUnlock=function(){
+  document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top < window.innerHeight){ el.classList.add('in'); }
+  });
+};
+window.addEventListener('scroll',_revUnlock,{passive:true});
+
+</script>
+</body>
+</html>
